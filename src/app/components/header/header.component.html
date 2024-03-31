@@ -1,0 +1,19 @@
+<div class="search-container">
+  <form class="search-form">
+    <input
+      type="number"
+      class="search-input"
+      name="search"
+      placeholder="search for user by id"
+      (keyup)="searchUser($event)"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      @for (user of users | search : searchId; track user) {
+      <mat-option [value]="user.id" (click)="getUserDetails(user.id)"
+        >{{ user.id }}
+      </mat-option>
+      }
+    </mat-autocomplete>
+  </form>
+</div>

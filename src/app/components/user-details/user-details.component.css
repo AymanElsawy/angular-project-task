@@ -1,0 +1,32 @@
+section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+.back {
+  margin-bottom: 20px;
+}
+.back .back-button {
+  background-color: #8cb9bd;
+}
+::ng-deep .custom-spinner-color circle {
+  stroke: #8cb9bd;
+}
+
+.card {
+  width: 600px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px 0 #8cb9bd, 0 6px 20px 0 #fefbf6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 350px;
+  }
+}

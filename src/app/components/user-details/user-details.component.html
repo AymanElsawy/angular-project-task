@@ -1,0 +1,26 @@
+<section>
+  @if (loading) {
+  <mat-spinner class="custom-spinner-color"></mat-spinner>
+  }
+  <div class="col">
+    <div class="back">
+      <button mat-fab class="back-button" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
+    <div class="card">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{ currentUser.first_name }}</mat-card-title>
+            <mat-card-subtitle>{{ currentUser.last_name }}</mat-card-subtitle>
+            <img mat-card-sm-image src="{{ currentUser.avatar }}" />
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Email : {{ currentUser.email }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>
